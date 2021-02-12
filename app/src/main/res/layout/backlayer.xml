@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingBottom="30dp">
+
+                <ImageView
+                    android:id="@+id/ProfilePhoto"
+                    android:layout_width="200dp"
+                    android:layout_height="150dp"
+                    android:layout_weight="0.2"
+                    android:paddingStart="10dp"
+                    android:paddingTop="20dp" />
+
+                <TextView
+                    android:id="@+id/nome"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="0.8"
+                    android:paddingLeft="20dp"
+                    android:textSize="32dp" />
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/titleParciped"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:textSize="15sp"
+                android:padding="10dp"
+                android:text="@string/user_status" />
+
+
+
+            <TextView
+                android:id="@+id/status"
+                android:layout_width="match_parent"
+                android:layout_height="66dp"
+                android:layout_gravity="center"
+                android:animateLayoutChanges="true"
+                android:background="@drawable/rounded_corner"
+                android:elevation="20dp"
+                android:paddingTop="20dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:paddingBottom="20dp"
+                android:textAlignment="center"
+                android:textSize="20dp"
+                android:textStyle="bold" />
+            <TextView
+                android:id="@+id/status_change_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="20dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="13dp"
+                android:text="@string/status_change"
+                app:drawableLeftCompat="@android:drawable/ic_menu_info_details" />
+
+            <TextView
+                android:id="@+id/contact_receved"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:padding="10dp"
+                android:textSize="15sp"
+                android:text="@string/recent_contact_title" />
+
+            <ListView
+                android:id="@+id/contact_list"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:animateLayoutChanges="true"
+                android:background="@drawable/rounded_corner"
+                android:layout_marginLeft="20dp"
+                android:layout_marginBottom="200dp"
+                android:layout_marginRight="20dp"/>
+
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

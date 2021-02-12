@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.gingerbread.SafeParty.ui.profilo.ModificaProfilo">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="25dip"
+                android:layout_marginBottom="25dip"
+                android:text="@string/status_change_page"
+                android:textAlignment="center"
+                android:textSize="20sp" />
+
+
+            <TextView
+                android:id="@+id/textStatus"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:backgroundTint="#595858"
+                android:paddingStart="20dp"
+                android:paddingEnd="20dp"
+                android:paddingTop="15dp"
+                android:text="@string/new_profile_status" />
+
+
+            <RadioGroup
+                android:id="@+id/radioStatus"
+                android:checkedButton="@+id/radio_button_1"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="240dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <RadioButton
+                    android:id="@+id/radioNegative"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="@string/covid_negative"
+                    android:checked="true"/>
+                <RadioButton
+                    android:id="@+id/radioPositive"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="@string/covid_positive"/>
+                <RadioButton
+                    android:id="@+id/radioVaccinated"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="@string/covid_vaccinated"/>
+
+            </RadioGroup>
+
+
+
+            <TextView
+                android:id="@+id/warningTextView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingTop="20dp"
+                android:paddingBottom="30dp"
+                android:layout_marginStart="35dp"
+                android:layout_marginEnd="35dp"
+                android:text="@string/disclaimer_text"
+                />
+
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="10dp"
+                android:gravity="center">
+                <Button
+                    android:id="@+id/cancelStatusChanges"
+                    android:layout_width="130dip"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="@color/red"
+                    android:text="@string/cancel_event_form"
+                    android:textAlignment="center"
+                    android:onClick="tornaIndietro"
+                    android:textColor="@color/white" />
+
+                <Button
+                    android:id="@+id/saveStatusChanges"
+                    android:layout_width="130dip"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:paddingRight="10dp"
+                    android:onClick="modificaStatus"
+                    android:text="@string/save_status_changes" />
+
+
+
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

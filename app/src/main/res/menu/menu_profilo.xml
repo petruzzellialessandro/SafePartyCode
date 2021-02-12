@@ -1,0 +1,14 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/action_update_room"
+        android:title="@string/edit"
+        android:iconTintMode="@color/primaryColor"
+        android:icon="@android:drawable/ic_menu_edit"
+        app:showAsAction="always" />
+    <item
+        android:id="@+id/log_out"
+        android:title="@string/logout" />
+
+</menu>
